@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:portfolio;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+app:
+  security:
+    username: test
+    password: test
+
+integrations:
+  membros:
+    base-url: http://localhost:8090
+    connect-timeout: 2s
+    read-timeout: 5s
